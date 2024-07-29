@@ -1,0 +1,512 @@
+@charset "UTF-8";
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #79a2ff;
+    color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header .logo, .header .logo-centered {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo a, .header .logo-centered a {
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: fantasy;
+    color: #022954;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo-img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.header .user-info span {
+    margin-right: 50px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.header .auth-button {
+    text-decoration: none;
+    color: #021d36;
+    padding: 8px 16px;
+    border: 2px solid #022954;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.header .auth-button:hover {
+    background-color: #022954;
+    color: #ffffff;
+    border-color: #022954; /* Match border color with background on hover */
+}
+
+/* Search Bar Styling */
+/* Search Bar Styling */
+.header .search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 400px; /* Adjust to fit your layout */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.header .search-bar form {
+    display: flex;
+    width: 100%;
+    flex-direction: row; /* Ensure search bar elements are side by side */
+    
+}
+
+.header .search-bar input[type="text"] {
+    padding: 6px 12px;
+    font-size: 17px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px; /* Rounded corners for the left side */
+    margin: 0; /* Remove default margins */
+    flex: 1;
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+.header .search-bar button[type="submit"] {
+    padding: 6px 12px;
+    background: #79a2ff;
+    font-size: 17px;
+    border: 1px solid #ddd;
+    border-radius: 0 4px 4px 0; /* Rounded corners for the right side */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s; /* Smooth background and text color transition */
+}
+.header .search-bar button[type="submit"] .fa-search {
+    font-size: 20px;
+    color: #021d36;
+}
+
+
+/* Ensure no vertical margins or padding disrupt horizontal alignment */
+.header .search-bar input[type="text"], 
+.header .search-bar button[type="submit"] {
+    margin: 0;
+}
+
+
+/* Navigation Bar 
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+*/
+/* Main Content */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Forms */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    box-sizing: border-box; /* Ensure padding is included in the height */
+    overflow: hidden; /* Hide scrollbars */
+    resize: none; /* Disable manual resizing */
+    min-height: 100px; /* Ensures a minimum height */
+    width: 100%; /* Full width */
+}
+
+/* Buttons specific to login and register */
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Error Message */
+.error-message-delete {
+    color: red;
+    margin-left: 10px; /* Space between button and message */
+    font-size: 14px;
+}
+
+/* Links */
+.subtext_link {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.subtext_link:hover {
+    text-decoration: underline;
+}
+
+/* Home and Search Result page styles */
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tile { 
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    overflow: hidden; /* Hide overflow content */
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack content vertically */
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+.tile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.tile h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 20px; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    font-family: 'Montserrat'; /*font for heading */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Adjust number of lines as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking words to wrap text */
+}
+
+.tile p {
+    margin: 10px 0; /* Adjust margin for better spacing */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow text */
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 16px; /* Adjust font size */
+}
+
+.tile-keywords {
+    max-width: 100%;
+    display: -webkit-box;
+    font-size: 20px; /* Adjust font size */
+    color: #333; /* Set the color */
+    font-family: 'Open Sans';
+    font-size: 20px; /* Adjust font size */
+    color: #333; /* Set the color */
+    font-family: 'Open Sans';
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Adjust number of lines as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Allow text wrapping */
+    word-break: break-word; /* Allow breaking words to wrap text */
+}
+
+.tile-description {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px; /* Adjust font size */
+    color: #333; /* Set the color */
+}
+
+
+/*add post button*/
+.floating-button {
+    
+     position: fixed; /* Fixes position relative to the viewport */
+	 z-index: 1000; /* Ensures it is on top of other elements */
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Shadow effect */
+	
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px; /* Set width */
+    height: 60px; /* Set height */
+    display: flex; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    font-size: 24px; /* Adjust font size if needed */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.floating-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+/* Post details */
+.post-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-details h2 {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    color: #333;
+}
+
+.post-details p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.post-details .keywords {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.post-details .user-info {
+    font-size: 16px;
+    color: #555;
+}
+
+.delete-button {
+	 position: fixed; /* Fixes position relative to the viewport */
+	 z-index: 1000; /* Ensures it is on top of other elements */
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Shadow effect */
+	
+    bottom: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px; /* Set width */
+    height: 60px; /* Set height */
+    display: flex; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    font-size: 24px; /* Adjust font size if needed */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.delete-button:hover {
+    background-color: darkred;
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust layout for responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .user-info {
+        margin-top: 10px;
+    }
+
+    .header .search-bar {
+        max-width: 100%; /* Allow search bar to expand on smaller screens */
+    }
+}
+
+/*post details*/
+    
+.problem-statement {
+	margin-top: -20px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10px; /* Adds padding from the left */
+    padding-right: 10px; /* Adds padding from the right */
+	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+ 
+    
+}
+
+.postedby {
+    margin-left: 30px; /* Aligns with the problem statement */
+    font-size: 16px;
+    color: #777; /* Grey color for subtext */
+}
+
+.separator {
+    margin: 10px 10px; /* Matches the margin of other elements */
+    border-top: 1px solid #ccc; /* Grey line */
+}
+
+.description-container {
+    margin: 20px; /* Adds margin around the container */
+    padding: 20px; /* Adds padding inside the container */
+}
+
+.description {
+    font-size: 18px; /* Larger font size for readability */
+    font-family: 'Segoe UI', 'Liberation Sans', sans-serif; /* Set font to Segoe UI and Liberation Sans */
+    margin-bottom: 30px; /* Space below the description */
+    margin-top: -30px; /* Space above the description */
+    margin-left: 30px; /* Space left of the description */
+}
+
+ .keywords {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+.keyword-tile {
+    background-color: #dadede; /* Light grey background */
+    padding: 5px 10px; /* Padding inside the tile */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Font size for keywords */
+    border: 1px solid #e3e6e6; /* Light grey border */
+}
+.key_link {
+    color: black;              /* Set link color to black */
+    text-decoration: none;     /* Remove underlines */
+}
+
+.key_link:hover {
+    color: blue;               /* Change link color to blue on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
