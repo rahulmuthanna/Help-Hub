@@ -1,0 +1,2 @@
+# Help-Hub
+ The Internal Knowledge Sharing Platform is a web-based application designed for employees and interns of an embedded systems company to facilitate seamless information exchange and collaboration. The platform allows users to register, log in, and share detailed descriptions of their ongoing projects, including keywords that make their posts easily searchable. This encourages a collaborative environment where employees can benefit from each other's expertise and experience.
