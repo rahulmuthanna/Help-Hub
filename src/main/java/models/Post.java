@@ -1,5 +1,7 @@
 package models;
 
+import java.util.List;
+
 public class Post {
     private int id;
     private String problemStatement;
@@ -9,10 +11,10 @@ public class Post {
     private String username;
     private String department;
     private String contactNumber;
+    private List<Comment> comments; // List to hold comments
 
     // Constructor
-    public Post() {
-    }
+    public Post() {}
 
     // Getters and Setters
     public int getId() {
@@ -77,5 +79,13 @@ public class Post {
 
     public void setContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }
